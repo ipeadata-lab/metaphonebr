@@ -18,7 +18,7 @@ Authors@R: c(
       role = c("aut"),
       comment = c(ORCID = "0000-0002-7461-932X"))
   )
-Description: Simplifies brazilian names phonetically using a custom metaphoneBR algorithm that preserve ending vowels.
+Description: Simplifies brazilian names phonetically using a custom metaphoneBR algorithm that preserves ending vowels.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
