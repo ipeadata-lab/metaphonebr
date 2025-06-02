@@ -15,7 +15,7 @@ keys.
 ## Installation
 
 You can install the development version of metaphonebr from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/) with :
 
 ``` r
 # install.packages("pak")

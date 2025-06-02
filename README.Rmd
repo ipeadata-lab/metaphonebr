@@ -24,9 +24,9 @@ the absence of unambiguous keys.
 
 ## Installation
 
-You can install the development version of metaphonebr from [GitHub](https://github.com/) with:
+You can install the development version of metaphonebr from [GitHub](https://github.com/) with :
 
-``` r
+``` {r eval=FALSE}
 # install.packages("pak")
 pak::pak("ipeadata-lab/metaphonebr")
 ```
