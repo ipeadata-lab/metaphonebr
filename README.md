@@ -4,7 +4,6 @@
 # metaphonebr
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The goal of metaphonebr is to simplify brazilian names phonetically
@@ -18,8 +17,8 @@ You can install the development version of metaphonebr from
 [GitHub](https://github.com/) with :
 
 ``` r
-# install.packages("pak")
-pak::pak("ipeadata-lab/metaphonebr")
+# install.packages("remotes")
+remotes::install_github("ipeadata-lab/metaphonebr")
 ```
 
 ## Example
