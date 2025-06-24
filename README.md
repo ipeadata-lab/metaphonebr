@@ -7,6 +7,7 @@
 
 [![Codecov test
 coverage](https://codecov.io/gh/ipeadata-lab/metaphonebr/graph/badge.svg)](https://app.codecov.io/gh/ipeadata-lab/metaphonebr)
+[![R-CMD-check](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of metaphonebr is to simplify brazilian names phonetically
