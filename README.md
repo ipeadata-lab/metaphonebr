@@ -4,6 +4,9 @@
 # metaphonebr
 
 <!-- badges: start -->
+
+[![Codecov test
+coverage](https://codecov.io/gh/ipeadata-lab/metaphonebr/graph/badge.svg)](https://app.codecov.io/gh/ipeadata-lab/metaphonebr)
 <!-- badges: end -->
 
 The goal of metaphonebr is to simplify brazilian names phonetically
