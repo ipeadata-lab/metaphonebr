@@ -5,7 +5,15 @@
 \alias{metaphonebr-package}
 \title{metaphonebr: Simplifies Brazilian Names Phonetically with Custom MetaphoneBR algorithm}
 \description{
-Simplifies brazilian names phonetically using a custom metaphoneBR algorithm that preserve ending vowels.
+Simplifies brazilian names phonetically using a custom metaphoneBR algorithm that preserves ending vowels.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/ipeadata-lab/metaphonebr}
+  \item \url{https://ipeadata-lab.github.io/metaphonebr/}
+}
+
 }
 \author{
 \strong{Maintainer}: Rodrigo Borges \email{rodrigoesborges@gmail.com} (\href{https://orcid.org/0000-0003-2076-1424}{ORCID})
