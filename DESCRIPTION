@@ -1,5 +1,5 @@
 Package: metaphonebr
-Title: Simplifies Brazilian Names Phonetically with Custom MetaphoneBR algorithm
+Title: Custom MetaphoneBR Phonetic Encoding for Brazilian Names
 Version: 0.0.1
 Authors@R: c(
     person(
@@ -16,9 +16,12 @@ Authors@R: c(
     person(
       "Lucas","Mation", 
       role = c("aut"),
-      comment = c(ORCID = "0000-0002-7461-932X"))
+      comment = c(ORCID = "0000-0002-7461-932X")),
+    person("Ipea - Institue for Applied Economic Research", role = c("cph", "fnd"))
   )
-Description: Simplifies brazilian names phonetically using a custom metaphoneBR algorithm that preserves ending vowels.
+Description: Simplifies brazilian names phonetically using a custom metaphoneBR algorithm that preserves ending vowels. 
+  Useful for name matching processing preserving gender information carried generally by ending vowels in portuguese.
+  Mation (2025) <doi:10.6082/uchicago.15104>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -30,3 +33,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://github.com/ipeadata-lab/metaphonebr, https://ipeadata-lab.github.io/metaphonebr/
+BugReports: https://github.com/ipeadata-lab/metaphonebr/issues
