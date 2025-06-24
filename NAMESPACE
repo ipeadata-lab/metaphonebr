@@ -2,3 +2,4 @@
 
 export(metaphonebr)
 import(stringi)
+importFrom(lifecycle,deprecated)
