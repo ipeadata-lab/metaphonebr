@@ -12,9 +12,9 @@ NULL #  Process @import stringi without function immediately below
 #' @return a preprocessed character vector.
 #' @keywords internal
 #' @examples
-#' # metaphonebr:::capitalize_remove_accents("Jo\\u00e3o Silva 123!")
+#' metaphonebr:::capitalize_remove_accents("Jo\u00e3o Silva 123!")
 capitalize_remove_accents <- function(fullname) {
-  # Remove diacritics (ex.: "Jo\\u00e3o" -> "Joao")
+  # Remove diacritics (ex.: "Jo\u00e3o" -> "Joao")
   fullname <- stringi::stri_trans_general(fullname, "Latin-ASCII")
   # Capitalizes (ex.: "joao" -> "JOAO")
   fullname <- base::toupper(fullname)
@@ -35,7 +35,7 @@ capitalize_remove_accents <- function(fullname) {
 #' @return a character vector with silent initial 'H's removed.
 #' @keywords internal
 #' @examples
-#' # metaphonebr:::remove_silent_letters("Helena Horta")
+#' metaphonebr:::remove_silent_letters("Helena Horta")
 remove_silent_letters <- function(fullname) {
   # Remove silent 'H'  at the beggining of each word. .
   # Example: "Helena Silva" -> "ELENA SILVA"
@@ -51,17 +51,17 @@ remove_silent_letters <- function(fullname) {
 #' @return a character vector with simplified representation of digraphs.
 #' @keywords internal
 #' @examples
-#' # metaphonebr:::simplify_digraphs("FILHA MANHA CHICO SCHMIDT SCENA ESCOVA QUILO")
+#' metaphonebr:::simplify_digraphs("FILHA MANHA CHICO SCHMIDT SCENA ESCOVA QUILO")
 simplify_digraphs <- function(fullname) {
   # Transform "LH" in "1"
   fullname <- stringi::stri_replace_all_fixed(fullname, "LH", "1")
   # Transform "NH" in "3"
   fullname <- stringi::stri_replace_all_fixed(fullname, "NH", "3")
-  # Transform "CH" in "X" ( /\\u0283/ sound)
+  # Transform "CH" in "X" ( /\u0283/ sound)
   fullname <- stringi::stri_replace_all_fixed(fullname, "CH", "X")
-  # Transform "SH" in "X" (For foreign names with  /\\u0283/ sound)
+  # Transform "SH" in "X" (For foreign names with  /\u0283/ sound)
   fullname <- stringi::stri_replace_all_fixed(fullname, "SH", "X")
-  # Transform "SCH" in "X" (som /\\u0283/ or /sk/ , here opted simplifying X)
+  # Transform "SCH" in "X" (som /\u0283/ or /sk/ , here opted simplifying X)
   fullname <- stringi::stri_replace_all_fixed(fullname, "SCH", "X") # Design decision, could vary to SK sound
   # Transform "PH" in "F"
   fullname <- stringi::stri_replace_all_fixed(fullname, "PH", "F")
@@ -69,10 +69,10 @@ simplify_digraphs <- function(fullname) {
   # If "SC" followed by E or I, Transform in "S"
   fullname <- stringi::stri_replace_all_regex(fullname, "SC(?=[EI])", "S")
   # If "SC" (ou XC) followed by A, O or U, Transform in "SK".
-  # Para manter consist\\u00eancia com 'C' se tornando 'K', 'SC' becomes 'SK' here.
+  # For consistency with 'C' becoming 'K', 'SC' becomes 'SK' here.
   fullname <- stringi::stri_replace_all_regex(fullname, "SC(?=[AOU])", "SK")
   # Treat "QU" digraph: remove silent U before e E or I
-  # \\u00dc treated in previous function
+  # \u00dc treated in previous function
   fullname <- stringi::stri_replace_all_regex(fullname, "QU(?=[EI])", "K") # QUE, QUI -> KE, KI
 
   # "QU" seguido de A, O -> K (simplified by design decision, generally U is pronounced in this case)
@@ -89,10 +89,12 @@ simplify_digraphs <- function(fullname) {
 #' @return A character vector with simplified consonants.
 #' @keywords internal
 #' @examples
-#' # metaphonebr:::simplify_consonants("CA\\u00c7ADOR CELSO CARLOS GEOVANIA WALTER YARA ZEBRA")
+#' namestosimplify <- "CA\u00c7ADOR CELSO CARLOS GEOVANIA WALTER YARA ZEBRA"
+#' print(namestosimplify)
+#' metaphonebr:::simplify_consonants(namestosimplify)
 simplify_consonants <- function(fullname) {
-  # Transform "\\u00c7" in "S"
-  fullname <- stringi::stri_replace_all_fixed(fullname, "\\u00c7", "S")
+  # Transform "\u00c7" in "S"
+  fullname <- stringi::stri_replace_all_fixed(fullname, "\u00c7", "S")
   # Letter C: if followed by E or I, Transform in "S"
   fullname <- stringi::stri_replace_all_regex(fullname, "C(?=[EI])", "S")
   # Letter C: if not followeb by E or I (and not part of CH, SC, previously treated), Transform in "K"
@@ -124,11 +126,11 @@ simplify_consonants <- function(fullname) {
 #' @return A character vector with simplified nasal sounds.
 #' @keywords internal
 #' @examples
-#' # metaphonebr:::simplify_ending_nasals(c("JOAQUIN", "JOAQUIM"))
+#' metaphonebr:::simplify_ending_nasals(c("JOAQUIN", "JOAQUIM"))
 simplify_ending_nasals <- function(fullname) {
   # Convert N, M, or any nasalized sound (represented by vowel+M/N) in word ending.
   # Original Methaphone centers on consonants. Here, a simplification:
-  # AO, AN, AM -> OM (ou numerical code)
+  # AO, AN, AM -> OM (or numerical code)
   # EN, in -> EM
   # IN, IM -> IM
   # ON, OM -> OM
@@ -147,7 +149,7 @@ simplify_ending_nasals <- function(fullname) {
 #' @return A character vector with duplicated vowels removed.
 #' @keywords internal
 #' @examples
-#' # metaphonebr:::remove_duplicated_vowels(c("AARAO", "REEBECA"))
+#' metaphonebr:::remove_duplicated_vowels(c("AARAO", "REEBECA"))
 remove_duplicated_vowels <- function(fullname) {
   # Compress duplicated vowels sequences.
   # Exemplo: "REEBA" -> "REBA"
@@ -163,7 +165,7 @@ remove_duplicated_vowels <- function(fullname) {
 #' @return A character vector with no repeated letters nor spaces.
 #' @keywords internal
 #' @examples
-#' # metaphonebr:::remove_dup_letters_spaces(c("  CARRO OSSO  ", "JOAOZINHO"))
+#' metaphonebr:::remove_dup_letters_spaces(c("  CARRO OSSO  ", "JOAOZINHO"))
 remove_dup_letters_spaces <- function(fullname) {
   # Remove adjacent duplicated letters.
   fullname <- stri_replace_all_regex(fullname, "(\\w)\\1+", "$1")
@@ -206,13 +208,13 @@ remove_dup_letters_spaces <- function(fullname) {
 #'
 #' @export
 #' @examples
-#' example_names <- c("Jo\\u00e3o Silva", "Joao da Silva", "Maria", "Marya",
+#' example_names <- c("Jo\u00e3o Silva", "Joao da Silva", "Maria", "Marya",
 #'                    "Helena", "Elena", "Philippe", "Filipe", "Xavier", "Chavier")
 #' phonetic_codes <- metaphonebr(example_names)
 #' print(data.frame(Original = example_names, metaphonebr = phonetic_codes))
 #'
 #' # With progress messages
-#' # phonetic_codes_verbose <- metaphonebr("Exemplo único", verbose = TRUE)
+#' phonetic_codes_verbose <- metaphonebr("Exemplo único", verbose = TRUE)
 metaphonebr <- function(fullnames, verbose = FALSE) {
   # Verifies if 'fullnames' is a character vector.
   if (!is.character(fullnames)) {

@@ -16,6 +16,6 @@ A character vector with no repeated letters nor spaces.
 Remove duplicated letters and spaces.
 }
 \examples{
-# metaphonebr:::remove_dup_letters_spaces(c("  CARRO OSSO  ", "JOAOZINHO"))
+metaphonebr:::remove_dup_letters_spaces(c("  CARRO OSSO  ", "JOAOZINHO"))
 }
 \keyword{internal}

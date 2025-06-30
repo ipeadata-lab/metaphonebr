@@ -16,6 +16,6 @@ a character vector with simplified representation of digraphs.
 Transforms common sounding digraphs to simplify their phonetic representation.
 }
 \examples{
-# metaphonebr:::simplify_digraphs("FILHA MANHA CHICO SCHMIDT SCENA ESCOVA QUILO")
+metaphonebr:::simplify_digraphs("FILHA MANHA CHICO SCHMIDT SCENA ESCOVA QUILO")
 }
 \keyword{internal}

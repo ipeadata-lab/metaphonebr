@@ -16,6 +16,8 @@ A character vector with simplified consonants.
 Represent similar consonants with single representation.
 }
 \examples{
-# metaphonebr:::simplify_consonants("CA\\u00c7ADOR CELSO CARLOS GEOVANIA WALTER YARA ZEBRA")
+namestosimplify <- "CA\u00c7ADOR CELSO CARLOS GEOVANIA WALTER YARA ZEBRA"
+print(namestosimplify)
+metaphonebr:::simplify_consonants(namestosimplify)
 }
 \keyword{internal}

@@ -39,11 +39,11 @@ algorithm, but was inspired by them considering brazilian portuguese
 context.
 }
 \examples{
-example_names <- c("Jo\\\\u00e3o Silva", "Joao da Silva", "Maria", "Marya",
+example_names <- c("Jo\u00e3o Silva", "Joao da Silva", "Maria", "Marya",
                    "Helena", "Elena", "Philippe", "Filipe", "Xavier", "Chavier")
 phonetic_codes <- metaphonebr(example_names)
 print(data.frame(Original = example_names, metaphonebr = phonetic_codes))
 
 # With progress messages
-# phonetic_codes_verbose <- metaphonebr("Exemplo único", verbose = TRUE)
+phonetic_codes_verbose <- metaphonebr("Exemplo único", verbose = TRUE)
 }

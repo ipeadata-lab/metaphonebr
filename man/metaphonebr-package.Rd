@@ -3,9 +3,9 @@
 \docType{package}
 \name{metaphonebr-package}
 \alias{metaphonebr-package}
-\title{metaphonebr: Custom MetaphoneBR Phonetic Encoding for Brazilian Names}
+\title{metaphonebr: Custom 'MetaphoneBR' Phonetic Encoding for Brazilian Names}
 \description{
-Simplifies brazilian names phonetically using a custom metaphoneBR algorithm that preserves ending vowels. Useful for name matching processing preserving gender information carried generally by ending vowels in portuguese. Mation (2025) \doi{10.6082/uchicago.15104}.
+Simplifies Brazilian names phonetically using a custom 'metaphoneBR' algorithm that preserves ending vowels. Useful for name matching processing preserving gender information carried generally by ending vowels in Portuguese. Mation (2025) \doi{10.6082/uchicago.15104}.
 }
 \seealso{
 Useful links:

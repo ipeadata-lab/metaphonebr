@@ -17,6 +17,6 @@ Remove diacritics, capitalizes and remove
 characters that are not letters or spaecs.
 }
 \examples{
-# metaphonebr:::capitalize_remove_accents("Jo\\u00e3o Silva 123!")
+metaphonebr:::capitalize_remove_accents("Jo\u00e3o Silva 123!")
 }
 \keyword{internal}
