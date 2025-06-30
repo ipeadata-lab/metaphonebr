@@ -1,7 +1,7 @@
 ## Resubmission
 
 * Removed comment in code lines in examples
-* quoted 'metaphoneBR' and capitalized Brazilian and Portugues for overcoming 'possibily misspelled words' warning
+* quoted 'metaphoneBR' and capitalized Brazilian and Portugues identified as 'possibily misspelled words' warning
 
 ## R CMD check results
 
