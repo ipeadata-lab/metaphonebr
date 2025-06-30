@@ -1,4 +1,5 @@
 ## Resubmission
+This is a resubmission. In this version I have:
 
 * Removed comment in code lines in examples
 * quoted 'metaphoneBR' and capitalized Brazilian and Portugues identified as 'possibily misspelled words' warning
