@@ -15,7 +15,4 @@ a character vector with silent initial 'H's removed.
 \description{
 Removes silent 'H'  at the beggining of each word.
 }
-\examples{
-metaphonebr:::remove_silent_letters("Helena Horta")
-}
 \keyword{internal}

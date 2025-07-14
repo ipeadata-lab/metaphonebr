@@ -15,7 +15,4 @@ A character vector with simplified nasal sounds.
 \description{
 Unifies Ending Nasal Sounds.
 }
-\examples{
-metaphonebr:::simplify_ending_nasals(c("JOAQUIN", "JOAQUIM"))
-}
 \keyword{internal}

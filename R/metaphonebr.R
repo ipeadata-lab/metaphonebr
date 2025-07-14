@@ -11,8 +11,8 @@ NULL #  Process @import stringi without function immediately below
 #' @param fullname a character vector.
 #' @return a preprocessed character vector.
 #' @keywords internal
-#' @examples
-#' metaphonebr:::capitalize_remove_accents("Jo\u00e3o Silva 123!")
+
+
 capitalize_remove_accents <- function(fullname) {
   # Remove diacritics (ex.: "Jo\u00e3o" -> "Joao")
   fullname <- stringi::stri_trans_general(fullname, "Latin-ASCII")
@@ -34,8 +34,7 @@ capitalize_remove_accents <- function(fullname) {
 #' @param fullname a character vector.
 #' @return a character vector with silent initial 'H's removed.
 #' @keywords internal
-#' @examples
-#' metaphonebr:::remove_silent_letters("Helena Horta")
+
 remove_silent_letters <- function(fullname) {
   # Remove silent 'H'  at the beggining of each word. .
   # Example: "Helena Silva" -> "ELENA SILVA"
@@ -50,8 +49,7 @@ remove_silent_letters <- function(fullname) {
 #' @param fullname a character vector.
 #' @return a character vector with simplified representation of digraphs.
 #' @keywords internal
-#' @examples
-#' metaphonebr:::simplify_digraphs("FILHA MANHA CHICO SCHMIDT SCENA ESCOVA QUILO")
+
 simplify_digraphs <- function(fullname) {
   # Transform "LH" in "1"
   fullname <- stringi::stri_replace_all_fixed(fullname, "LH", "1")
@@ -88,10 +86,7 @@ simplify_digraphs <- function(fullname) {
 #' @param fullname A character vector.
 #' @return A character vector with simplified consonants.
 #' @keywords internal
-#' @examples
-#' namestosimplify <- "CA\u00c7ADOR CELSO CARLOS GEOVANIA WALTER YARA ZEBRA"
-#' print(namestosimplify)
-#' metaphonebr:::simplify_consonants(namestosimplify)
+
 simplify_consonants <- function(fullname) {
   # Transform "\u00c7" in "S"
   fullname <- stringi::stri_replace_all_fixed(fullname, "\u00c7", "S")
@@ -125,8 +120,7 @@ simplify_consonants <- function(fullname) {
 #' @param fullname A character vector.
 #' @return A character vector with simplified nasal sounds.
 #' @keywords internal
-#' @examples
-#' metaphonebr:::simplify_ending_nasals(c("JOAQUIN", "JOAQUIM"))
+
 simplify_ending_nasals <- function(fullname) {
   # Convert N, M, or any nasalized sound (represented by vowel+M/N) in word ending.
   # Original Methaphone centers on consonants. Here, a simplification:
@@ -148,8 +142,7 @@ simplify_ending_nasals <- function(fullname) {
 #' @param fullname A character vector.
 #' @return A character vector with duplicated vowels removed.
 #' @keywords internal
-#' @examples
-#' metaphonebr:::remove_duplicated_vowels(c("AARAO", "REEBECA"))
+
 remove_duplicated_vowels <- function(fullname) {
   # Compress duplicated vowels sequences.
   # Exemplo: "REEBA" -> "REBA"
@@ -164,8 +157,7 @@ remove_duplicated_vowels <- function(fullname) {
 #' @param fullname A character vector.
 #' @return A character vector with no repeated letters nor spaces.
 #' @keywords internal
-#' @examples
-#' metaphonebr:::remove_dup_letters_spaces(c("  CARRO OSSO  ", "JOAOZINHO"))
+
 remove_dup_letters_spaces <- function(fullname) {
   # Remove adjacent duplicated letters.
   fullname <- stri_replace_all_regex(fullname, "(\\w)\\1+", "$1")

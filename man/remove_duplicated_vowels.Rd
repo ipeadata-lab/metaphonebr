@@ -15,7 +15,4 @@ A character vector with duplicated vowels removed.
 \description{
 Compress adjacent identical vowel sequences.
 }
-\examples{
-metaphonebr:::remove_duplicated_vowels(c("AARAO", "REEBECA"))
-}
 \keyword{internal}
