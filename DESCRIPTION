@@ -1,6 +1,6 @@
 Package: metaphonebr
 Title: Custom 'MetaphoneBR' Phonetic Encoding for Brazilian Names
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(
     person(
       "Rodrigo", "Borges",

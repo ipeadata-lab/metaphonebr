@@ -1,3 +1,7 @@
+# metaphonebr 0.0.4
+
+* implement cran requested changes in documentation
+
 # metaphonebr 0.0.3
 
 * implement cran requested changes
