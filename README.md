@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/metaphonebr)](https://CRAN.R-project.org/package=metaphonebr)
 [![Codecov test
 coverage](https://codecov.io/gh/ipeadata-lab/metaphonebr/graph/badge.svg)](https://app.codecov.io/gh/ipeadata-lab/metaphonebr)
 [![R-CMD-check](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/R-CMD-check.yaml)
