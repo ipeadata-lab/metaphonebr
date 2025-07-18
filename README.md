@@ -9,7 +9,9 @@
 status](https://www.r-pkg.org/badges/version/metaphonebr)](https://CRAN.R-project.org/package=metaphonebr)
 [![Codecov test
 coverage](https://codecov.io/gh/ipeadata-lab/metaphonebr/graph/badge.svg)](https://app.codecov.io/gh/ipeadata-lab/metaphonebr)
-[![R-CMD-check](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/R-CMD-check.yaml)
+[![check](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/check.yaml/badge.svg)](https://github.com/ipeadata-lab/metaphonebr/actions/workflows/check.yaml)
+[![CRAN/METACRAN Total
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/metaphonebr?color=blue)](https://CRAN.R-project.org/package=metaphonebr)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
