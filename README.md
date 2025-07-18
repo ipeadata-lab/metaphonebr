@@ -23,8 +23,7 @@ keys.
 
 ## Installation
 
-The package is in the process of submission to CRAN. When it is
-accepted, the stable version can be installed with:
+The stable version of the package can be installed with:
 
 ``` r
 install.packages("metaphonebr")
