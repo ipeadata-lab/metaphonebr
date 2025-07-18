@@ -121,7 +121,7 @@ context. In particular, by construction it preserves ending vowels since
 they imply generally gender information in Brazilian Names (ex.: ADRIANO
 and ADRIANA).
 
-## Nota <a href="https://www.ipea.gov.br"><img src="man/figures/ipea_logo.png" alt="Ipea" align="right" width="300"/></a>
+## Note <a href="https://www.ipea.gov.br"><img src="man/figures/ipea_logo.png" alt="Ipea" align="right" width="300"/></a>
 
 **metaphonebr** is developed by a team of researchers at Instituto de
 Pesquisa Econômica Aplicada (Ipea).
