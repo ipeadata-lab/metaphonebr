@@ -1,4 +1,6 @@
-# metaphonebr (development version)
+# metaphonebr 0.0.5
+
+* fix authors DESCRIPTION
 
 # metaphonebr 0.0.4
 
